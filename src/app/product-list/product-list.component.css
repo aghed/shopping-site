@@ -1,0 +1,39 @@
+.product-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 15px;
+    padding: 5px;
+}
+.product{
+    display: block;
+    border: 2px solid rgb(28, 122, 28); 
+    border-radius: 5px; 
+    background-color:rgb(28, 120, 28);
+    color:white;
+    padding:10px;
+    margin:5px;
+    float: left;
+}
+.product:hover{
+    cursor: pointer;
+    animation: slide 0.4s forwards;
+}
+@keyframes slide {
+    to{
+        margin-top: 0px;
+        border-radius: 10px;
+        padding:15px;
+        margin-bottom:  0px;
+        box-shadow: -5px 10px gray;
+    }
+}
+.product-header{
+    border-bottom: 2px solid white;
+    text-align: center;
+    font-size: large;
+    width:100%;
+}
+.product-body{
+    padding: 10px;
+    text-align: center;
+}

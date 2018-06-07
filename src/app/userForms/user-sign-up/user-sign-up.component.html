@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-sm-2"></div>
+  <div class="col-sm-8">
+  <ng-container *ngIf="token; else elseTemplate">
+    <h1>Signed Up Success And Loged In</h1>
+    <hr>
+  </ng-container>
+  
+  <ng-template #elseTemplate>
+  <h1>User SignUp</h1>
+  <hr>
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email"
+        [(ngModel)]="user.email" name="email" required #email="ngModel"
+      >
+      <div *ngIf="!email.valid &&email.touched">
+      <small id="email-error" class="text-danger">invalid email</small>
+    </div>
+      <div *ngIf="duplicated_email">
+      <small id="email-error" class="text-danger">email alerady used</small>
+    </div>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" id="password" 
+      [(ngModel)]="user.password" placeholder="Password" name="password"
+      required #password="ngModel"
+      >
+      <div *ngIf="!password.valid && password.touched">
+      <small id="password-error" class="text-danger">invalid password</small>
+    </div>
+    </div>
+    <button type="submit" class="btn btn-success" [disabled]="!f.valid">SignUp</button>
+  </form>
+</ng-template>
+</div>
+</div>

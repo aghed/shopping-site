@@ -1,0 +1,21 @@
+<div class="row">
+<div class="col-sm-8">
+<h1>Products</h1>
+<hr>
+      <div  class="product-container">
+        <div *ngFor="let product of productsList" class="product">
+          <div class="product-header">
+            {{product.name}}
+          </div>
+          <div class="product-body">
+            <span>{{product.price}} </span>
+          </div>
+      </div>
+    </div>
+  </div>
+
+<div class="col-sm-4">
+    <h1>Orders List</h1>
+    <hr>
+  </div>
+</div>

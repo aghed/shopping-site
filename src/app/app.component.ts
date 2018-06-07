@@ -6,5 +6,35 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'shopping site';
+  tests=[
+    {
+      'name':'some name',
+      'desc':'some desc'
+    },
+    {
+      'name':'some name',
+      'desc':'some desc'
+    },
+    {
+      'name':'some name',
+      'desc':'some desc'
+    },
+    {
+      'name':'some name',
+      'desc':'some desc'
+    },
+    {
+      'name':'some name',
+      'desc':'some desc'
+    },
+    {
+      'name':'some name',
+      'desc':'some desc'
+    },
+    {
+      'name':'some name',
+      'desc':'some desc'
+    }
+  ];
 }

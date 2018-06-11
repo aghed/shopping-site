@@ -8,8 +8,11 @@ Headers.append('Content-Type','application/json');
 
 @Injectable()
 export class HttpService {
+   
 
   constructor(private http:HttpClient) { }
+  
+  
 
   getProducts()
   {
@@ -34,5 +37,9 @@ export class HttpService {
   userLogIn(user)
   {
     return this.http.post(HttpUrl+'/users/login/',user,{headers:Headers});
+  }
+  tokenCheck(token)
+  {
+    return this.http.post(HttpUrl+'/authCheck',token,{headers:Headers});
   }
 }

@@ -1,3 +1,8 @@
 export const constants={
-    success:'SUCCESS'
+    success:'SUCCESS',
+    user:{
+        email:'',
+        password:''
+    },
+    token:''
 }

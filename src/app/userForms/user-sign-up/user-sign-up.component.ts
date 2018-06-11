@@ -9,7 +9,6 @@ import { ResponseOptions } from '@angular/http';
   selector: 'app-user-sign-up',
   templateUrl: './user-sign-up.component.html',
   styleUrls: ['./user-sign-up.component.css'],
-  providers:[HttpService]
 })
 export class UserSignUpComponent implements OnInit {
   

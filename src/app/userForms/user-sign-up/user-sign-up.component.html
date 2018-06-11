@@ -1,12 +1,6 @@
 <div class="row">
   <div class="col-sm-2"></div>
   <div class="col-sm-8">
-  <ng-container *ngIf="token; else elseTemplate">
-    <h1>Signed Up Success And Loged In</h1>
-    <hr>
-  </ng-container>
-  
-  <ng-template #elseTemplate>
   <h1>User SignUp</h1>
   <hr>
   <form (ngSubmit)="onSubmit(f)" #f="ngForm">
@@ -34,6 +28,5 @@
     </div>
     <button type="submit" class="btn btn-success" [disabled]="!f.valid">SignUp</button>
   </form>
-</ng-template>
 </div>
 </div>

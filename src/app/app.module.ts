@@ -11,6 +11,7 @@ import { UserLoginComponent } from './userForms/user-login/user-login.component'
 import { HttpService } from './Http.service';
 import { httpInterceptor } from './interceptor/httpInterceptor';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { httpInterceptor } from './interceptor/httpInterceptor';
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    routing
+    routing,
+    BrowserAnimationsModule
   ],
   providers: [{
     provide:HTTP_INTERCEPTORS,

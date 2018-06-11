@@ -2,12 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { HttpService } from '../../Http.service';
 import { constants } from '../../constants';
+import { routerTransition } from '../../routerTransition';
 
 
 @Component({
   selector: 'app-user-login',
   templateUrl: './user-login.component.html',
   styleUrls: ['./user-login.component.css'],
+  animations:[routerTransition()],
+  host: {'[@routerTransition]': ''}
 })
 export class UserLoginComponent implements OnInit {
   user={

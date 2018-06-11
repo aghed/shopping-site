@@ -4,11 +4,14 @@ import { Product } from '../../product';
 import { HttpService } from '../../Http.service';
 import { constants } from '../../constants';
 import { ResponseOptions } from '@angular/http';
+import { routerTransition } from '../../routerTransition';
 
 @Component({
   selector: 'app-user-sign-up',
   templateUrl: './user-sign-up.component.html',
   styleUrls: ['./user-sign-up.component.css'],
+  animations:[routerTransition()],
+  host: {'[@routerTransition]': ''}
 })
 export class UserSignUpComponent implements OnInit {
   
